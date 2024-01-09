@@ -52,11 +52,29 @@ Character classes can distinguish the difference between letters, digits, and et
 
 ### The OR Operator
 
-
+QR operator is used to store a regex as a reference in a variable. It is useful when you need to use the same regex more than a few times, as you don't have to retype the same pattern again.
 
 ### Flags
 
+Flags are modifier that alters the default searching behavior of a regex. It is usually placed right behind the second lash in any regex: "/regex/*flags*".
+
+Below are a couple examples of flags:
+
+* **i** : Ignore case sensitivity
+
+* **g** : Search globally
+
+* **s** : Make "." match newlines
+
+* **m** : Makes "^" and "$" match the start and end of every line instead of every string
+
+* **y** : Stands for *sticky*. Sticky uses the lastIndex property. The "y" flag indicates that the regex attempts to match the target string only from the index indicated by the *lastIndex* property. [Sticky](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
+
+* **u** : Makes the expression treat characters in a given test string as code points rather than code units. This means that with the u flag set, we can get our expressions to behave normally on characters that are outside the BMP range of the UTF-16 encoding. [Unicode](https://www.codeguage.com/courses/regexp/flags)
+
 ### Character Escapes
+
+Character Escapes are \f, \n(new line), \r, \t (tab), \v, and etc. Putting a "\" in front of the usual character will change its function, making it being represented in its literal form.
 
 ## Author
 
